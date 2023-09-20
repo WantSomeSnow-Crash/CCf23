@@ -3,9 +3,10 @@ let xDir, yDir; // direction of the ball
 let size; // size of the ball
 let Ysize = 100 // Y size of the ball
 let Xsize = 100 // X size of the ball
-let speedX = 150; // speed of the ball
-let speedY = 150; // speed of the ball
-let g = 0.6; // gravity
+let speedX = 5; // speed of the ball
+let speedY = 20; // speed of the ball
+let sc
+let g = 0.4; // gravity
 
 
 
@@ -30,14 +31,13 @@ function setup() {
 
 function draw() {
   // motion blur
-  background(137, 207, 240, 90);
+  background(137, 207, 240, 150);
   // ball
-  stroke(0);
+  stroke(255);
   ellipse(x, y, Xsize, Ysize );
 
-
   // if the ball touches the left or right side
-  if (x >= width - Xsize / 1.5 || x <= Xsize / 1.5) {
+  if (x >= width - Xsize / 1.4 || x <= Xsize / 1.4) {
     // change direction
     xDir = xDir * -1;
   }
@@ -49,18 +49,12 @@ function draw() {
   }
 
   // ball touches the ceiling or floor change the height
-  if (y >= height - Ysize / 2 || y <= Ysize / 2) {
+  if (y >= height - Ysize / 1.5 || y <= Ysize / 1.5) {
     Ysize = Ysize - 100;}
     else {
         Ysize = 50;
     }
 
-// ball hits wall change the width
-  if (x >= width - Xsize / 1 || x <= Xsize / 2) {
-    Ysizesize = Ysize - 100;}
-    else {
-        Ysizesize = 50;
-    }
 
     // ball is not touching wall raise Ysize up 50 pixels
   if (x <= width - Xsize / 2 || x >= Xsize / 2 || y <= height - Ysize / 2 || y >= Ysize / 2) {
@@ -74,18 +68,18 @@ function draw() {
       }
 
 // write the words boop randomly on the screen when ball hits the wall
-if (x >= width - size / 1.5 || x <= size / 1.5) {
+if (x >= width - size / 1.3 || x <= size / 1.3) {
   text("BOOP", random(width), random(height));
 }
-if (y >= height - size / 1.5 || y <= size / 1.5) {
+if (y >= height - size / 1.3 || y <= size / 1.3) {
   text("BOOP", random(width), random(height));
 }
 
  // //change color of ball when hits the wall
-  if (x >= width - size / 2 || x <= size / 2) {
+  if (x >= width - size / 1.3 || x <= size / 1.3) {
     fill(random(255), random(255), random(255));
   }
-  if (y >= height - size / 2 || y <= size / 2) {
+  if (y >= height - size / 1.3 || y <= size / 1.3) {
     fill(random(255), random(255), random(255));
   }
 
