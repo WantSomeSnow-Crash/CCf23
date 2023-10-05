@@ -1,0 +1,17 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('Cinzel-VariableFont_wght.ttf');
+}
+
+body {
+  font-family: 'Cinzel', serif;
+}
+
+canvas {
+  display: block;
+}
