@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <table>
+    <tr>
+      <td><div style="background-color: black; width: 20px; height: 20px;"></div></td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td><div style="background-color: green; width: 20px; height: 20px;"></div></td>
+      <td>Ticker</td>
+    </tr>
+    <tr>
+      <td><div style="background-color: purple; width: 20px; height: 20px;"></div></td>
+      <td>Actvity ($USD traded by retail investors in a given ticker divided by total $USD traded by retail investors)</td>
+    </tr>
+    <tr>
+      <td><div style="background-color: red; width: 20px; height: 20px;"></div></td>
+      <td>Sentiment (How investers feel about the stock; higher is better )</td>
+    </tr>
+
+    <tr>
+      <td><div style="background-color:  width; px: height; 20px;"></div></td>
+      <td>Choose a date to see the data for that day then click on the moving shape to see it
+    </tr>
+  </table>
+
+  <select id="row-selector">
+    <option value="-1">Select a date</option>
+    <option value="0">Oct 27</option>
+    <option value="1">Oct 26</option>
+    <option value="2">Oct 25</option>
+    <!-- Add more options for each row -->
+  </select>
+
+  <!-- Add a button to clear the canvas -->
+
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>
