@@ -26,19 +26,19 @@ let duration;
 
 //IT'S ALL A GAME
 
-function preload() {
-playerImgD = ('Pilot Images/Pilot-atcam-1.png')
-playerImgU = ('Pilot Images/pilotUp0.png')
-playerImgL = ('Pilot Images/PilotL-1.1.png')
-playerImgR = ('Pilot Images/pilotRight0.png')
-pisImg = ('Pistol.png')
-enemyImg = ('bulletEnemy/bulletEnemyDown3.png')
-bg = loadImage('fullTiledFloor.png'); // Load the background image
-goImg = loadImage('gameover screen/gameover.png');
-introImg = loadImage('Intro screen/TitleScreenPlaceHolder.jpg');
+function preload() {//If I missed any creditsthe images mainly came from the sprites sheets, the github page or just plain old google
+playerImgD = ('Pilot Images/Pilot-atcam-1.png')//got from https://www.spriters-resource.com/pc_computer/enterthegungeon/sheet/155533/
+playerImgU = ('Pilot Images/pilotUp0.png')//got from https://www.spriters-resource.com/pc_computer/enterthegungeon/sheet/155533/
+playerImgL = ('Pilot Images/PilotL-1.1.png')//got from https://www.spriters-resource.com/pc_computer/enterthegungeon/sheet/155533/
+playerImgR = ('Pilot Images/pilotRight0.png')//got from https://www.spriters-resource.com/pc_computer/enterthegungeon/sheet/155533/
+pisImg = ('Pistol.png')//got from https://www.spriters-resource.com/pc_computer/enterthegungeon/sheet/155533/
+enemyImg = ('bulletEnemy/bulletEnemyDown3.png')//got from https://www.spriters-resource.com/pc_computer/enterthegungeon/sheet/155651/
+bg = loadImage('fullTiledFloor.png'); // Load the background image;
+goImg = loadImage('gameover screen/gameover.png');//Image from https://github.com/albertlai431/Gungeon/blob/master/Gungeon/images/gameOver.png
+introImg = loadImage('Intro screen/TitleScreenPlaceHolder.jpg');//got from https://github.com/albertlai431/Gungeon/blob/master/Gungeon/images/TitleScreenPlaceHolder.jpg
 soundFormats('wav');
-gameSound = loadSound('570463__fusionwolf3740__epic-music-loop.wav');
-font = loadFont('Handjet-VariableFont_ELGR,ELSH,wght.ttf');
+gameSound = loadSound('570463__fusionwolf3740__epic-music-loop.wav');//music from freesound.org
+font = loadFont('Handjet-VariableFont_ELGR,ELSH,wght.ttf');//font from google fonts
 }
 
 //YOU MUST BREAK THE LOOP SCOTT
@@ -69,7 +69,7 @@ function draw() {
  } else if (gameState === 'playing') {
 
 background(bg); // Set the background
-cursor('cursor.png');//makes cursor cool
+cursor('cursor.png');//makes cursor cool; image from https://github.com/albertlai431/Gungeon/blob/master/Gungeon/images/cursor.png
 
 for (let i = 0; i < enemyBullets.length; i++) {//Enemys can SHOOT ahhhhh
   let bullet = enemyBullets[i];
@@ -127,7 +127,7 @@ function shootEnemyBullet(enemy) { //More enemy shoot
   ) {
     let bullet = createSprite(enemy.position.x, enemy.position.y, 5, 5);//bullets are CREATED
 
-    let bulletImage = loadImage('gameover screen/arrow.png');//makes them cool; look like arrow
+    let bulletImage = loadImage('gameover screen/arrow.png');//makes them cool; look like arrow; got from https://github.com/albertlai431/Gungeon/blob/master/Gungeon/images/arrow.png
    // bullet.shapeColor = color(0, 255, 0);
    bullet.addImage(bulletImage);//make bullet arrow
     // Calculate the direction vector from the enemy to the player
@@ -184,7 +184,7 @@ if (pistol.overlap(player)) {}
 // Shoot bullet function for player
 function shootPlayerBullet() {
   let bullet = createSprite(pistol.position.x + 25 , pistol.position.y - 9, 5, 5);
-  let bulletImage = loadImage('pistolBullet.png');
+  let bulletImage = loadImage('pistolBullet.png');// image from https://github.com/albertlai431/Gungeon/blob/master/Gungeon/images/pistolBullet.png
   bullet.addImage(bulletImage);
 
   // Calculate the direction vector
